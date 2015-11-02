@@ -1,0 +1,92 @@
+<html>
+
+<head>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://connect.soundcloud.com/sdk-2.0.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.js"></script>
+    <script src="audio5.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="main container">
+
+        <div class="raw">
+            <div class="wrapper">
+                <div class="search-box col-md-4">
+                    <label>enter the text of the song you want to search for</label>
+
+                    <input id="search-string" type="text" placeholder="Search" />
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    <!--<label id="search-cta">Search It!</label>-->
+                    <div id="ul-wrapper">
+                        <ul id="search-results"></ul>
+                    </div>
+                    <div class="tracks-navigation">
+
+                        <button id="next-track" type="button" class="btn btn-info">Next tracks</button>
+
+                        &nbsp;|&nbsp;
+
+                        <button id="prv-track" type="button" class="btn btn-info">prev tracks</button>
+
+                    </div>
+                </div>
+
+
+                <template id="songs-template">
+
+                    <li id="{{id}}" data-trackImage="{{artwork_url}}" data-trackUri="{{uri}}">
+
+                        <p>
+
+                            <span class="noedit name glyphicon glyphicon-play-circle"> {{title}}</span>
+
+                        </p>
+                        <!--	<p>
+		<strong>id:</strong> 
+		<span class="noedit drink">{{id}}</span>
+
+		</p> -->
+
+
+                    </li>
+                </template>
+
+
+
+                <div id="current-track" class="col-md-4">
+                    <img src="" />
+                    <br/>
+                    <iframe id="track-player" width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https://api.soundcloud.com/tracks/0000000&color=0066cc&auto_play=true"></iframe>
+                </div>
+
+                <div class="search-results col-md-4">
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <hr/>
+    <!--
+<h3>iframe:</h3>
+<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/34019569&amp;color=0066cc&auto_play=true"></iframe>
+-->
+</body>
+
+</html>
