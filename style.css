@@ -1,0 +1,49 @@
+
+/*search box section:*/
+#ul-wrapper {
+
+position: relative;
+//height:168px;
+overflow: hidden;
+}
+
+#search-results {
+    width:650px;
+    position: absolute;
+    
+    padding: 0;
+    margin:0;
+	
+}
+
+#search-results li {margin-bottom:10px;}
+
+#search-results li:nth-child(odd) {
+    background: #D5D7EF;
+}
+
+#search-results li:nth-child(even) {
+    background: #EFE1D5;
+}
+
+#search-results p {
+margin:0;
+padding:0;
+}
+
+/*general desing*/
+body {background: #EEE}
+
+.search-box span, #search-results li {cursor :pointer;}
+
+#current-track img {
+	margin-bottom: 20px;
+}
+
+#track-player {display: none;}
+
+
+.tracks-navigation{
+
+	margin-top:25px;
+}
